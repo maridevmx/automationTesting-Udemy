@@ -1,0 +1,24 @@
+{
+  "Titulo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//h2[contains(.,'Regístrate gratis para escuchar')]]"
+  },
+  "Email": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[contains(@name,'email')]"
+  },
+  "emailConfirm": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[contains(@name,'confirm')]"
+  },
+  "Password": {
+    "GetFieldBy": "id",
+    "ValueToFind": "password"
+  },
+  "Perfil": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@id='displayname']"
+  }
+
+}
+

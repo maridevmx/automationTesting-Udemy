@@ -1,0 +1,11 @@
+#Ignoring .bat
+Ejecutar Conjunto de Pruebas.bat
+
+#Ignoring files
+.project
+.pydevproject
+
+
+# Ignoring directories
+.idea/
+environment/
