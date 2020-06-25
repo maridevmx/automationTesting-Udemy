@@ -9,11 +9,11 @@
 
 ## Información del curso 📚
 
-* Selenium Testing Framework ¡De novato a experto! - https://www.udemy.com/course/test-automation-con-python-desde-rookie-hasta-experto/
+Selenium Testing Framework ¡De novato a experto! - https://www.udemy.com/course/test-automation-con-python-desde-rookie-hasta-experto/
 
 ## Expresiones de Gratitud 🎁
 
-* Al profesor Mervin Alberto Diaz Lugo por compartir sus conocimientos 🤓.  
+Al profesor Mervin Alberto Diaz Lugo por compartir sus conocimientos 🤓.  
 
 ---
 ⌨️ con ❤️ por [maridevmx](https://github.com/maridevmx) 👩‍💻
