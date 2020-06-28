@@ -11,7 +11,7 @@
 
 Selenium Testing Framework ¡De novato a experto! - https://www.udemy.com/course/test-automation-con-python-desde-rookie-hasta-experto/
 
-## Expresiones de Gratitud 🎁
+## Agradecimientos 🎁
 
 Al profesor Mervin Alberto Diaz Lugo por compartir sus conocimientos 🤓.  
 
