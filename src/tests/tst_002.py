@@ -1,49 +1,31 @@
+# -*- coding: utf-8 -*-
+#############################
+# Curso:    Selenium Testing Framework con Python ¡De novato a experto! - Udemy
+# Tema:     Configuración de navegadores para Selenium
+# Autor:    M.M.
+# Fecha:    26/06/2020
+#
+# Descripción: Se realizan las configuraciones para los navegadores
+#
+###############################
+# Log:
+# 26/06/2020    MMM - Se crea el archivo
+################################
+
+from src.functions.Functions import Functions as Selenium
 import unittest
 
-class Test_002(unittest.TestCase):
+
+class Test_001(Selenium, unittest.TestCase):
 
     def setUp(self):
+        Selenium.abrir_navegador(self)
+
+    def test_001(self):
         pass
-
-    def test_002(self):
-        self.Variable_A = 50
-        self.Variable_B = 50
-        self.RESULTADO = self.Variable_A + self.Variable_B
-
-        self.assertEqual(self.Variable_A, self.Variable_B, "Los valores son distintos")
-
-    def test_003(self):
-        self.Variable_A = 40
-        self.Variable_B = 50
-        self.RESULTADO = self.Variable_A + self.Variable_B
-
-        self.assertNotEqual(self.Variable_A, self.Variable_B, "Los valores son distintos")
-
-    def test_004(self):
-        self.Variable_A = 10
-
-        if self.Variable_A >= 10:
-            self.RESULTADO = True
-
-        else:
-            self.RESULTADO = False
-
-        self.assertTrue(self.RESULTADO, f"El valor no es verdadero, es: {self.Variable_A}")
-
-    def test_005(self):
-        self.Variable_A = "Bienvenido a la clase de unittest"
-        self.Variable_B = "Bienvenido"
-
-        self.assertIn(self.Variable_B, self.Variable_A, f"No coinciden")
-
-    def test_006(self):
-        self.Variable_A = "Bienvenido a la clase de unittest"
-        self.Variable_B = "Hola"
-
-        self.assertIsNot(self.Variable_B, self.Variable_A, f"No coinciden")
 
     def tearDown(self):
-        pass
+        Selenium.tearDown(self)
 
 if __name__ == '__main__':
     unittest.main()

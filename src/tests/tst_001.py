@@ -1,17 +1,31 @@
+# -*- coding: utf-8 -*-
+#############################
+# Curso:    Selenium Testing Framework con Python ¡De novato a experto! - Udemy
+# Tema:     Configuración de navegadores para Selenium
+# Autor:    M.M.
+# Fecha:    26/06/2020
+#
+# Descripción: Se realizan las configuraciones para los navegadores
+#
+###############################
+# Log:
+# 26/06/2020    MMM - Se crea el archivo
+################################
+
+from src.functions.Functions import Functions as Selenium
 import unittest
 
 
-class Test_001(unittest.TestCase):
+class Test_001(Selenium, unittest.TestCase):
 
     def setUp(self):
-        self.Variable_A = 4
-        self.Variable_B = 6
+        Selenium.abrir_navegador(self, 'https://adaitw.org/', 'FIREFOX')
 
     def test_001(self):
-        self.Resultado = self.Variable_A + self.Variable_B
+        pass
 
     def tearDown(self):
-        self.assertTrue(self.Resultado == 10, f"El valor no es 10, es {self.Resultado}")
+        Selenium.tearDown(self)
 
 if __name__ == '__main__':
     unittest.main()
