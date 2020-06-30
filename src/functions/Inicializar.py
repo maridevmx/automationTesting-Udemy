@@ -26,7 +26,7 @@ class Inicializar():
     Environment = 'Dev'
 
     # BROWSER DE PRUEBAS
-    Navegador = u'IExplorer'
+    Navegador = u'FIREFOX'
 
     # DIRECTORIO DE LA EVIDENCIA
     Path_Evidencias = baseDir + u'\data\capturas'
@@ -36,7 +36,7 @@ class Inicializar():
 
     # CONFIGURACIÓN DE ENTORNOS
     if Environment == 'Dev':
-        URL = 'https://www.google.com/'
+        URL = 'https://www.spotify.com/mx/signup/'
         User = 'UdemyTest'
         Pass = 'UdemyTestPython'
 

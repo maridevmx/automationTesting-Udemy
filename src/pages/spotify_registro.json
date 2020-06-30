@@ -16,8 +16,8 @@
     "ValueToFind": "password"
   },
   "Perfil": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//input[@id='displayname']"
+    "GetFieldBy": "id",
+    "ValueToFind": "displayname"
   }
 
 }
