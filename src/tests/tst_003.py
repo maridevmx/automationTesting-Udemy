@@ -15,6 +15,7 @@
 from src.functions.Functions import Functions as Selenium
 from src.pages.spotify_registro import Registro
 import unittest
+import time
 
 
 class Test_003(Selenium, unittest.TestCase):
@@ -30,15 +31,23 @@ class Test_003(Selenium, unittest.TestCase):
         # ACCEDER A LAS KEYS (ENTIDADES) DEL JSON
         #Selenium.get_entity(self, "Titulo")
 
-        assert Selenium.xpath_element(self,
-                                      Registro.lbl_titulo_xpath).text == Registro.tituloPagina, "No coinciden"
+        assert "No coinciden", Selenium.get_text(self, "Titulo") == Registro.tituloPagina
+        # assert "No coinciden", Selenium.get_elements(self, "Titulo").text == Registro.tituloPagina
 
+        # Selenium.get_text(self, "Titulo") == Registro.tituloPagina
+
+        Selenium.esperar_elemento(self, "Email")
+
+        Selenium.esperar_elemento(self, "emailConfirm")
 
         Selenium.get_elements(self, "Email").send_keys(Registro.emailUsuario)
         Selenium.get_elements(self, "emailConfirm").send_keys(Registro.emailUsuarioConfirm)
         Selenium.get_elements(self, "Password").send_keys(Registro.passwordUsuario)
         Selenium.get_elements(self, "Perfil").send_keys(Registro.aliasUsuario)
 
+        Selenium.get_select_element(self, "Mes de nacimiento").select_by_visible_text("Enero")
+
+        time.sleep(5)
 
     def tearDown(self):
         Selenium.tearDown(self)

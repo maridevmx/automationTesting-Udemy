@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # NOMENCLATURAS
 # TXT = Cajas de texto
 # LBL = Labels
