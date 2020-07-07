@@ -1,0 +1,30 @@
+{
+  "Titulo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//h1[contains(.,'Frames Examples')]"
+  },
+  "Frame2": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//iframe[@id='frame2']"
+  },
+  "Frame2 Select": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//select[@id='animals']"
+  },
+  "Frame1": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//iframe[@id='frame1']"
+  },
+  "Frame1 Input": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[contains(@type,'text')]"
+  },
+  "Frame3": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//iframe[@id='frame3']"
+  },
+  "Frame3 Input": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@id='a']"
+  }
+}

@@ -348,5 +348,55 @@ class Functions(Inicializar):
                 print("get_select_element: No se encontró el elemento: " + self.json_ValueToFind)
                 Functions.tearDown(self)
 
+    ##########################################################################
+    #####################  <--- TEXTBOX & COMBO HANDLE --->  #################
+    ##########################################################################
+
+    def select_by_text(self, entity, text):
+        Functions.get_select_element(self, entity).select_by_visible_text(text)
+
+    def switch_to_parentFrame(self):
+        self.driver.switch_to.parent_frame()
+
+    def send_key_text(self, entity, text):
+        Functions.get_elements(self, entity).clear()
+        Functions.get_elements(self, entity).send_keys(text)
+
+    # -------------------- FUNCIÓN CAMBIO DE 'FRAMES' --------------------
+    def switch_to_iframe(self, locator):
+        iframe = Functions.get_elements(self, locator)
+        self.driver.switch_to.frame((iframe))
+        print(f"Se realizó el switch a {locator}")
+
+    def switch_to_windows_name(self, ventana):
+        if ventana in self.ventanas:
+            self.driver.switch_to.window(self.ventanas[ventana])
+            Functions.page_has_loaded(self)
+            print("Volviendo a " + ventana + " : " + self.ventanas[ventana])
+        else:
+            self.nWindows = len(self.driver.window_handles) -1
+            self.ventanas[ventana] = self.driver.window_handles[int(self.nWindows)]
+            self.driver.switch_to.window(self.ventanas[ventana])
+            self.driver.maximize_window()
+            print(self.ventanas)
+            print("Estas en " + ventana + " : " + self.ventanas[ventana])
+            Functions.page_has_loaded(self)
+
+    ##########################################################################
+    ###########################  <--- JAVASCRIPT --->  #######################
+    ##########################################################################
+
+    def new_window(self, URL):
+        self.driver.execute_script(f'''window.open("{URL}","_blank");''')
+        Functions.page_has_loaded(self)
+
+    def page_has_loaded(self):
+        driver = self.driver
+        print("Checking if {} page is loaded. ".format(self.driver.current_url))
+        page_state = driver.execute_script('return document.readyState')
+        yield
+        WebDriverWait(driver, 30).until(lambda driver: page_state == 'complete')
+        assert page_state == 'complete', "No se completó la carga"
+
 
 

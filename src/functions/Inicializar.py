@@ -20,7 +20,7 @@ class Inicializar():
     DateFormat = "%d/%m/%Y"
 
     # JsonData
-    Json = baseDir + u'\pages'
+    Json = baseDir + u'/pages'
 
     # Environment
     Environment = 'Dev'
@@ -29,10 +29,10 @@ class Inicializar():
     Navegador = u'FIREFOX'
 
     # DIRECTORIO DE LA EVIDENCIA
-    Path_Evidencias = baseDir + u'\data\capturas'
+    Path_Evidencias = baseDir + u'/data/capturas'
 
     # HOJA DE DATOS EXCEL
-    Excel = baseDir + u'\data\Data.xlsx'
+    Excel = baseDir + u'/data/Data.xlsx'
 
     # CONFIGURACIÓN DE ENTORNOS
     if Environment == 'Dev':
