@@ -1,0 +1,6 @@
+{
+  "Liga Amazon": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(.,'Información corporativa')]"
+  }
+}

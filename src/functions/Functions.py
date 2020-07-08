@@ -24,6 +24,7 @@ from selenium.webdriver.chrome.options import Options as OptionsChrome
 from selenium.webdriver import Edge
 from selenium.webdriver.support.ui import Select
 import json
+import time
 
 class Functions(Inicializar):
     ##########################################################
@@ -157,7 +158,7 @@ class Functions(Inicializar):
         json_path = Inicializar.Json + '/' + FILE + '.json'
 
         try:
-            with open(json_path, "r") as read_file:
+            with open(json_path, encoding='utf-8') as read_file:
                 self.json_strings = json.loads(read_file.read())
                 print("Get json_file: " + json_path)
                 return self.json_strings
@@ -386,10 +387,12 @@ class Functions(Inicializar):
     ###########################  <--- JAVASCRIPT --->  #######################
     ##########################################################################
 
+    # -------------------- FUNCIÓN 'ABRIR NUEVA PESTAÑA' --------------------
     def new_window(self, URL):
         self.driver.execute_script(f'''window.open("{URL}","_blank");''')
         Functions.page_has_loaded(self)
 
+    # -------------------- FUNCIÓN PARA VERIFICAR EL CARGADO COMPLETO DE LA PÁGINA --------------------
     def page_has_loaded(self):
         driver = self.driver
         print("Checking if {} page is loaded. ".format(self.driver.current_url))
@@ -398,5 +401,97 @@ class Functions(Inicializar):
         WebDriverWait(driver, 30).until(lambda driver: page_state == 'complete')
         assert page_state == 'complete', "No se completó la carga"
 
+    # -------------------- FUNCIÓN PARA REALIZAR SCROLL A LA PÁGINA --------------------
+    def scroll_to(self, locator):
+        Get_Entity = Functions.get_entity(self, locator)
+
+        if Get_Entity is None:
+            return print("No se encontró el valor en el Json definido")
+
+        else:
+            try:
+                if self.json_GetFieldBy.lower() == "id":
+                    localizador = self.driver.find_element(By.ID, self.json_ValueToFind)
+                    self.driver.execute_script("arguments[0].scrollIntoView();", localizador)
+                    print(u"scroll_to by ID: " + locator)
+                    return True
+
+                elif self.json_GetFieldBy.lower() == "xpath":
+                    localizador = self.driver.find_element(By.XPATH, self.json_ValueToFind)
+                    self.driver.execute_script("arguments[0].scrollIntoView();", localizador)
+                    print(u"scroll_to by XPATH: " + locator)
+                    return True
+
+                elif self.json_GetFieldBy.lower() == "link":
+                    localizador = self.driver.find_element(By.PARTIAL_LINK_TEXT, self.json_ValueToFind)
+                    self.driver.execute_script("arguments[0].scrollIntoView();", localizador)
+                    print(u"scroll_to by LINK: " + locator)
+                    return True
+
+            except TimeoutException:
+                print(u"scroll_to: El " + locator + " no está presente")
+                Functions.tearDown(self)
+
+    # -------------------- FUNCIÓN PARA CLIC SOBRE UN ELEMENTO --------------------
+    def js_clic(self, locator, MyTextElement = None):
+        Get_Entity = Functions.get_entity(self, locator)
+        Functions.esperar_elemento(self, locator, MyTextElement)
+
+        if Get_Entity is None:
+            return print("No se encontró el valor en el Json definido")
+
+        else:
+            try:
+                if self.json_GetFieldBy.lower() == "id":
+                    localizador = self.driver.find_element(By.ID, self.json_ValueToFind)
+                    self.driver.execute_script("arguments[0].click();", localizador)
+                    print(u"js_clic by ID: " + locator)
+                    return True
+
+                elif self.json_GetFieldBy.lower() == "xpath":
+                    if MyTextElement is not None:
+                        self.json_ValueToFind = self.json_ValueToFind.format(MyTextElement)
+                        print(self.json_ValueToFind)
+
+                    localizador = self.driver.find_element(By.XPATH, self.json_ValueToFind)
+                    self.driver.execute_script("arguments[0].click();", localizador)
+                    print(u"js_clic by XPATH: " + locator)
+                    return True
+
+                elif self.json_GetFieldBy.lower() == "link":
+                    localizador = self.driver.find_element(By.PARTIAL_LINK_TEXT, self.json_ValueToFind)
+                    self.driver.execute_script("arguments[0].click();", localizador)
+                    print(u"js_clic by LINK: " + locator)
+                    return True
+
+                elif self.json_GetFieldBy.lower() == "name":
+                    localizador = self.driver.find_element(By.NAME, self.json_ValueToFind)
+                    self.driver.execute_script("arguments[0].click();", localizador)
+                    print(u"js_clic by NAME: " + locator)
+                    return True
+
+                elif self.json_GetFieldBy.lower() == "css":
+                    localizador = self.driver.find_element(By.CSS_SELECTOR, self.json_ValueToFind)
+                    self.driver.execute_script("arguments[0].click();", localizador)
+                    print(u"js_clic by CSS: " + locator)
+                    return True
+
+            except TimeoutException:
+                print(u"js_clic: El " + locator + " no está presente")
+                Functions.tearDown(self)
 
 
+
+    ##########################################################################
+    ##########################  <--- WAIT ELEMENTS --->  #####################
+    ##########################################################################
+    def esperar(self, timeLoad = 8):
+        print("Esperar: Inicia ( " +str(timeLoad) + ")")
+
+        try:
+            totalWait = 0
+            while (totalWait < timeLoad):
+                time.sleep(1)
+                totalWait = totalWait + 1
+        finally:
+            print("Esperar: Carga Finalizada...")
