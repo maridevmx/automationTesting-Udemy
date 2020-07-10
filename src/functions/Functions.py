@@ -11,9 +11,11 @@
 # Log:
 # 25/06/2020    MMM - Se crea el archivo
 ################################
-import pytest
+
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoAlertPresentException
+from selenium.common.exceptions import NoSuchWindowException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -21,10 +23,15 @@ from src.functions.Inicializar import Inicializar
 from selenium import webdriver
 from selenium.webdriver.ie.options import DesiredCapabilities
 from selenium.webdriver.chrome.options import Options as OptionsChrome
-from selenium.webdriver import Edge
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.keys import Keys
+import pytest
 import json
 import time
+import datetime
+Scenario = {}
+#diaGlobal= time.strftime(Inicializar.DateFormat)  # formato aaaa/mm/dd
+#horaGlobal = time.strftime(Inicializar.HourFormat)  # formato 24 houras
 
 class Functions(Inicializar):
     ##########################################################
@@ -349,19 +356,77 @@ class Functions(Inicializar):
                 print("get_select_element: No se encontró el elemento: " + self.json_ValueToFind)
                 Functions.tearDown(self)
 
+    def alert_windows(self, accept = "accept"):
+
+        try:
+            wait = WebDriverWait(self.driver, 30)
+            wait.until(EC.alert_is_present(), print("Esperando alerta..."))
+
+            alert = self.driver.switch_to.alert
+
+            print(alert.text)
+
+            if accept.lower() == "accept":
+                alert.accept()
+                print("Click in Accept")
+            else:
+                alert.dismiss()
+                print("Click in Dismiss")
+        except NoAlertPresentException:
+            print("Alerta no presente")
+        except NoSuchWindowException:
+            print("Alerta no presente")
+        except TimeoutException:
+            print("Alerta no presente")
+
+    def esperar(self, timeLoad = 8):
+        print("Esperar: Inicia ( " +str(timeLoad) + ")")
+
+        try:
+            totalWait = 0
+            while (totalWait < timeLoad):
+                time.sleep(1)
+                totalWait = totalWait + 1
+        finally:
+            print("Esperar: Carga Finalizada...")
+
     ##########################################################################
     #####################  <--- TEXTBOX & COMBO HANDLE --->  #################
     ##########################################################################
 
+    # -------------------- FUNCIÓN QUE OBTIENE EL TEXTO DE UN 'DROP-DOWN' --------------------
     def select_by_text(self, entity, text):
         Functions.get_select_element(self, entity).select_by_visible_text(text)
 
-    def switch_to_parentFrame(self):
-        self.driver.switch_to.parent_frame()
-
+    # -------------------- FUNCIÓN ESCRIBE TEXTO EN UN ELEMENTO --------------------
     def send_key_text(self, entity, text):
         Functions.get_elements(self, entity).clear()
+        # Functions.send_especific_keys(self, entity, "Del")
         Functions.get_elements(self, entity).send_keys(text)
+
+    # -------------------- FUNCIÓN QUE ENVIA KEYS ESPECIALES --------------------
+    def send_especific_keys(self, element, key):
+        if key == 'Enter':
+            Functions.get_elements(self, element).send_keys(Keys.ENTER)
+
+        elif key == 'Tab':
+            Functions.get_elements(self, element).send_keys(Keys.TAB)
+
+        elif key == 'Space':
+            Functions.get_elements(self, element).send_keys(Keys.SPACE)
+
+        elif key == 'Del':
+            Functions.get_elements(self, element).send_keys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE))
+
+        elif key == 'Back':
+
+            lenText = Functions.get_elements(self, element).text
+
+            while lenText == 0:
+                Functions.get_elements(self, element).send_keys(Keys.BACK_SPACE)
+                lenText = lenText -1
+
+        time.sleep(3)
 
     # -------------------- FUNCIÓN CAMBIO DE 'FRAMES' --------------------
     def switch_to_iframe(self, locator):
@@ -369,6 +434,11 @@ class Functions(Inicializar):
         self.driver.switch_to.frame((iframe))
         print(f"Se realizó el switch a {locator}")
 
+    # -------------------- FUNCIÓN QUE OBTIENE EL FRAME 'PADRE' --------------------
+    def switch_to_parentFrame(self):
+        self.driver.switch_to.parent_frame()
+
+    # -------------------- FUNCIÓN CAMBIO DE VENTANA POR NOMBRE --------------------
     def switch_to_windows_name(self, ventana):
         if ventana in self.ventanas:
             self.driver.switch_to.window(self.ventanas[ventana])
@@ -480,18 +550,129 @@ class Functions(Inicializar):
                 print(u"js_clic: El " + locator + " no está presente")
                 Functions.tearDown(self)
 
+    ##########################################################################
+    ##########################  <--- VERIFICACIÓN --->  ######################
+    ##########################################################################
+    def assert_text(self, locator, texto):
+        Get_Entity = Functions.get_entity(self, locator)
 
+        if Get_Entity is None:
+            return print("No se encontró el valo en el Json definido")
+
+        else:
+            if self.json_GetFieldBy.lower() == "id":
+                wait = WebDriverWait(self.driver, 15)
+                wait.until(EC.presence_of_all_elements_located((By.ID, self.json_ValueToFind)))
+                objText = self.driver.find_element_by_id(self.json_ValueToFind).text
+
+            elif self.json_GetFieldBy.lower() == "name":
+                wait = WebDriverWait(self.driver, 15)
+                wait.until(EC.presence_of_all_elements_located((By.NAME, self.json_ValueToFind)))
+                objText = self.driver.find_element_by_name(self.json_ValueToFind).text
+
+            elif self.json_GetFieldBy.lower() == "xpath":
+                wait = WebDriverWait(self.driver, 15)
+                wait.until(EC.presence_of_all_elements_located((By.XPATH, self.json_ValueToFind)))
+                objText = self.driver.find_element_by_xpath(self.json_ValueToFind).text
+
+            elif self.json_GetFieldBy.lower() == "link":
+                wait = WebDriverWait(self.driver, 15)
+                wait.until(EC.presence_of_all_elements_located((By.PARTIAL_LINK_TEXT, self.json_ValueToFind)))
+                objText = self.driver.find_element_by_partial_link_text(self.json_ValueToFind).text
+
+            elif self.json_GetFieldBy.lower() == "css":
+                wait = WebDriverWait(self.driver, 15)
+                wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, self.json_ValueToFind)))
+                objText = self.driver.find_element_by_css_selector(self.json_ValueToFind).text
+
+        print("Verificar texto -> el valor mostrado en: " + locator + " es: " + objText + " el esperado es: " + texto)
+        assert texto == objText, "Los valores comparados no coinciden"
+
+    # -------------------- FUNCIÓN BOOLEANA PARA VERIFICAR LA EXISTENCIA DE UN ELEMENTO --------------------
+    def check_element(self, locator):
+        Get_Entity = Functions.get_entity(self, locator)
+
+        if Get_Entity is None:
+            return print("No se encontró el valor en el Json definido")
+        else:
+            try:
+                if self.json_GetFieldBy.lower() == "id":
+                    wait = WebDriverWait(self.driver, 20)
+                    wait.until(EC.visibility_of_element_located((By.ID, self.json_ValueToFind)))
+                    print(u"check_element: Se visualizó el elemento " + locator)
+                    return True
+
+                elif self.json_GetFieldBy.lower() == "name":
+                    wait = WebDriverWait(self.driver, 20)
+                    wait.until(EC.visibility_of_element_located((By.NAME, self.json_ValueToFind)))
+                    print(u"check_element: Se visualizó el elemento " + locator)
+                    return True
+
+                elif self.json_GetFieldBy.lower() == "xpath":
+                    wait = WebDriverWait(self.driver, 20)
+                    wait.until(EC.visibility_of_element_located((By.XPATH, self.json_ValueToFind)))
+                    print(u"check_element: Se visualizó el elemento " + locator)
+                    return True
+
+                elif self.json_GetFieldBy.lower() == "link":
+                    wait = WebDriverWait(self.driver, 20)
+                    wait.until(EC.visibility_of_element_located((By.LINK_TEXT, self.json_ValueToFind)))
+                    print(u"check_element: Se visualizó el elemento " + locator)
+                    return True
+
+                elif self.json_GetFieldBy.lower() == "css":
+                    wait = WebDriverWait(self.driver, 20)
+                    wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, self.json_ValueToFind)))
+                    print(u"check_element: Se visualizó el elemento " + locator)
+                    return True
+
+            except NoSuchElementException:
+                print("check_element: No se encontró el elemento: " + self.json_ValueToFind)
+                return False
+
+            except TimeoutException:
+                print("check_element: No se encontró el elemento: " + self.json_ValueToFind)
+                return False
 
     ##########################################################################
-    ##########################  <--- WAIT ELEMENTS --->  #####################
+    ########################  <--- DATA DE ESCENARIO --->  ###################
     ##########################################################################
-    def esperar(self, timeLoad = 8):
-        print("Esperar: Inicia ( " +str(timeLoad) + ")")
 
-        try:
-            totalWait = 0
-            while (totalWait < timeLoad):
-                time.sleep(1)
-                totalWait = totalWait + 1
-        finally:
-            print("Esperar: Carga Finalizada...")
+    def create_variable_scenary(self, key, value):
+        Scenario[key] = value
+        print(Scenario)
+        print("Se almacenó la key " + key + " : " + value)
+
+    def save_variable_scenary(self, element, variable):
+        Scenario[variable] = Functions.get_text(self, element)
+        print(Scenario)
+        print("Se almacenó el valor " + variable + " : " + Scenario[variable])
+
+    def get_variable_scenary(self, variable):
+        self.variable = Scenario[variable]
+        print(f"get_variable_scenary: {self.variable}")
+        return self.variable
+
+    def compare_with_variable_scenary(self, element, variable):
+        variable_scenary = str(Scenario[variable])
+        element_text = str(Functions.get_text(self, element))
+        exist = (variable_scenary in element_text)
+        print(exist)
+        print(f"Comparando los valores ... Verificando si {variable_scenary} está presente en {element_text} : {exist}")
+        assert  exist == True, f"{variable_scenary} != {element_text}"
+
+    def textDataEnvironmentReplace(self, text):
+        if text == 'today':
+            self.today = datetime.date.today()
+            text = self.today.strftime(Inicializar.DateFormat)
+
+        elif text == 'yesterday':
+            self.today = datetime.date.today() - datetime.timedelta(days = 1)
+            text = self.today.strftime(Inicializar.DateFormat)
+
+        elif text == 'last month':
+            self.today = datetime.date.today() - datetime.timedelta(days = 30)
+            text = self.today.strftime(Inicializar.DateFormat)
+
+        return text
+

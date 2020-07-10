@@ -3,9 +3,13 @@
     "GetFieldBy": "Xpath",
     "ValueToFind": "//h2[contains(.,'Registrarte con tu correo electrónico')]"
   },
+  "verifica_cuenta": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[contains(.,'¿Ya tienes cuenta? Inicia sesión.')]"
+  },
   "Email": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//input[contains(@name,'email')]"
+    "ValueToFind": "//input[@id='email']"
   },
   "emailConfirm": {
     "GetFieldBy": "Xpath",
@@ -22,6 +26,10 @@
   "Mes de nacimiento": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//select[@id='month']"
+  },
+  "mensaje_error_email": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id='__next']/main/div[2]/form/div[1]/div[2]"
   }
 
 }

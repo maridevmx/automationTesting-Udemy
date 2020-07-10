@@ -1,0 +1,10 @@
+{
+  "img_log": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id='hplogo']"
+  },
+  "txt_busqueda": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@name='q']"
+  }
+}

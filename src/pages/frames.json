@@ -26,5 +26,13 @@
   "Frame3 Input": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//input[@id='a']"
+  },
+  "Frame4 Alerta": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//iframe[@id='iframeResult']"
+  },
+  "Alerta": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button[@onclick='myFunction()'][contains(.,'Try it')]"
   }
 }
