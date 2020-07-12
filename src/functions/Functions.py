@@ -29,6 +29,9 @@ import pytest
 import json
 import time
 import datetime
+import openpyxl
+import allure
+import pyodbc as pyodbc
 Scenario = {}
 #diaGlobal= time.strftime(Inicializar.DateFormat)  # formato aaaa/mm/dd
 #horaGlobal = time.strftime(Inicializar.HourFormat)  # formato 24 houras
@@ -675,4 +678,75 @@ class Functions(Inicializar):
             text = self.today.strftime(Inicializar.DateFormat)
 
         return text
+
+    # -------------------- FUNCIÓN PARA MANEJO DE ARCHIVOS EXCEL --------------------
+    def leer_celda(self, celda):
+        wb = openpyxl.load_workbook(Inicializar.Excel)
+        sheet = wb["DataTest"]
+        valor = str(sheet[celda].value)
+        print(u"------------------------------------")
+        print(u"El libro de excel utilizado es: " + Inicializar.Excel)
+        print(u"El valor de la celda es: " + valor)
+        print(u"------------------------------------")
+        return valor
+
+    def escribir_celda(self, celda, valor):
+        wb = openpyxl.load_workbook(Inicializar.Excel)
+        hoja = wb["DataTest"]
+        hoja[celda] = valor
+        wb.save(Inicializar.Excel)
+        print(u"------------------------------------")
+        print(u"El libro de excel utilizado es: " + Inicializar.Excel)
+        print(u"Se escribio en la celda: " + str(celda) + u" el valor: " + str(valor))
+        print(u"------------------------------------")
+
+    ##########################################################################
+    ##########################  <--- BASE DE DATOS --->  #####################
+    ##########################################################################
+
+    def pyodbc_conn(self, host = Inicializar.DB_HOST, port = Inicializar.DB_PORT, dbname = Inicializar.DB_DATABASE, user = Inicializar.DB_USER, password = Inicializar.DB_PASS):
+        try:
+            configDB = dict(server = host,
+                            port = port,
+                            database = dbname,
+                            username = user,
+                            password = password)
+
+            connection = ('SERVER={server};' 
+                         'PORT={port};' +
+                         'DATABASE={database};' +
+                         'UID={username};' +
+                         'PWD={password}')
+
+            conn = pyodbc.connect(r'Driver={Oracle in XE};dbq=XE;' +
+                                  connection.format(**configDB))
+
+            self.cursor = conn.cursor()
+            print("Always connected")
+            return self.cursor
+
+        except (pyodbc.OperationalError) as error:
+            self.cursor = None
+            pytest.skip("Error en conexión a la base de datos: " + str(error))
+
+    def pyodbc_query(self, query):
+        self.cursor = Functions.pyodbc_conn(self)
+
+        if self.cursor is not None:
+            try:
+                print("pyodbc_query: " + query)
+                self.cursor.execute(query)
+                self.result = self.cursor.fetchall()
+                for row in self.result:
+                    print(row)
+
+            except (pyodbc.Error) as error:
+                print("Error en la consulta: ", error)
+            finally:
+                if (self.cursor):
+                    self.cursor.close()
+                    print("pyodbc_query: Se cerró la conexión")
+
+
+
 

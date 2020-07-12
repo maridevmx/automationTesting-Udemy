@@ -41,7 +41,13 @@ class Test_012(Selenium, unittest.TestCase):
 
         Selenium.esperar(self, 3)
 
-        time.sleep(3)
+        # RECUPERAR DESDE EXCEL
+        NOMBRE = Selenium.leer_celda(self, "A1")
+        APELLIDO = Selenium.leer_celda(self, "B1")
+        DNI = Selenium.leer_celda(self, "C1")
+
+        Selenium.create_variable_scenary(self, "NOMBRE", NOMBRE)
+        Selenium.create_variable_scenary(self, "APELLIDO", APELLIDO)
 
     def tearDown(self):
         Selenium.tearDown(self)

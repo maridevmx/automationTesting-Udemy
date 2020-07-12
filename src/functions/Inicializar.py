@@ -18,6 +18,7 @@ class Inicializar():
     # Directorio Base
     baseDir = os.path.abspath(os.path.join(__file__,"../.."))
     DateFormat = "%d/%m/%Y"
+    HourFormat = "%H%M%S"
 
     # JsonData
     Json = baseDir + u'/pages'
@@ -32,13 +33,18 @@ class Inicializar():
     Path_Evidencias = baseDir + u'/data/capturas'
 
     # HOJA DE DATOS EXCEL
-    Excel = baseDir + u'/data/Data.xlsx'
+    Excel = baseDir + u'/data/DataTest.xlsx'
 
     # CONFIGURACIÓN DE ENTORNOS
     if Environment == 'Dev':
         URL = 'https://www.spotify.com/mx/signup/'
         User = 'UdemyTest'
         Pass = 'UdemyTestPython'
+        DB_HOST = 'localhost'
+        DB_PORT = '1521'
+        DB_DATABASE = 'BD_SDFT_INS_WEB'
+        DB_USER = 'APP_SDFT_INS_WEB'
+        DB_PASS = 'APP_SDFT_INS_WEB'
 
     if Environment == 'Test':
         URL = 'https://www.despegar.com.mx/'
