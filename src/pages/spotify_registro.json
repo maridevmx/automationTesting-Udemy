@@ -30,7 +30,10 @@
   "mensaje_error_email": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//*[@id='__next']/main/div[2]/form/div[1]/div[2]"
+  },
+  "Captcha": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id='recaptcha-accessible-status']"
   }
-
 }
 

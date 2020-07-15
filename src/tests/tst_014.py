@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #############################
 # Curso:    Selenium Testing Framework con Python ¡De novato a experto! - Udemy
-# Tema:     Modelando funciones Selenium: Variables de escenario
+# Tema:     Modelando funciones Selenium: Conexión a base de datos
 # Autor:    M.M.
 # Fecha:    11/07/2020
 #

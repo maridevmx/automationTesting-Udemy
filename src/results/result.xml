@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="3" failures="0" hostname="DESKTOP-00SVLVA" name="pytest" skipped="0" tests="3" time="1.117" timestamp="2020-07-13T19:22:39.359385"><testcase classname="" file="tst_001.py" name="tst_001" time="0.000"><error message="collection failure">ImportError while importing test module &apos;C:\udemy.python.SeleniumFramework\src\tests\tst_001.py&apos;.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+tst_001.py:15: in &lt;module&gt;
+    from src.functions.Functions import Functions as Selenium
+..\functions\Functions.py:36: in &lt;module&gt;
+    import pyodbc as pyodbc
+E   ModuleNotFoundError: No module named &apos;pyodbc&apos;</error></testcase><testcase classname="" file="tst_002.py" name="tst_002" time="0.000"><error message="collection failure">ImportError while importing test module &apos;C:\udemy.python.SeleniumFramework\src\tests\tst_002.py&apos;.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+tst_002.py:15: in &lt;module&gt;
+    from src.functions.Functions import Functions as Selenium
+..\functions\Functions.py:36: in &lt;module&gt;
+    import pyodbc as pyodbc
+E   ModuleNotFoundError: No module named &apos;pyodbc&apos;</error></testcase><testcase classname="" file="tst_003.py" name="tst_003" time="0.000"><error message="collection failure">ImportError while importing test module &apos;C:\udemy.python.SeleniumFramework\src\tests\tst_003.py&apos;.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+tst_003.py:15: in &lt;module&gt;
+    from src.functions.Functions import Functions as Selenium
+..\functions\Functions.py:36: in &lt;module&gt;
+    import pyodbc as pyodbc
+E   ModuleNotFoundError: No module named &apos;pyodbc&apos;</error></testcase></testsuite></testsuites>

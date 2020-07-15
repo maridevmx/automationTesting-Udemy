@@ -29,12 +29,16 @@ import pytest
 import json
 import time
 import datetime
+import re
+import os
 import openpyxl
 import allure
 import pyodbc as pyodbc
 Scenario = {}
-#diaGlobal= time.strftime(Inicializar.DateFormat)  # formato aaaa/mm/dd
-#horaGlobal = time.strftime(Inicializar.HourFormat)  # formato 24 houras
+diaGlobal= time.strftime(Inicializar.DateFormat)  # formato aaaa/mm/dd
+horaGlobal = time.strftime(Inicializar.HourFormat)  # formato 24 houras
+
+
 
 class Functions(Inicializar):
     ##########################################################
@@ -77,7 +81,7 @@ class Functions(Inicializar):
             return self.driver
 
         elif NAVEGADOR == ('FIREFOX'):
-            self.driver = webdriver.Firefox()
+            self.driver = webdriver.Firefox(executable_path = Inicializar.baseDir + "\\drivers\\geckodriver.exe")
             self.driver.implicitly_wait(10)
             self.driver.maximize_window()
             self.driver.get(URL)
@@ -87,7 +91,7 @@ class Functions(Inicializar):
             return self.driver
 
         elif NAVEGADOR == ('OPERA'):
-            self.driver = webdriver.Opera()
+            self.driver = webdriver.Opera(executable_path = Inicializar.baseDir + "\\drivers\\operadriver.exe")
             self.driver.implicitly_wait(10)
             self.driver.maximize_window()
             self.driver.get(URL)
@@ -98,7 +102,9 @@ class Functions(Inicializar):
 
         # ---------- CONFIGURACIÓN PENDIENTE
         elif NAVEGADOR == {'EDGE'}:
-            self.driver = webdriver.Edge()
+            #options = EdgeOptions()
+            #options.use_chromium = True
+            self.driver = webdriver.Edge(executable_path = Inicializar.baseDir + "\\drivers\\msedgedriver.exe")
             self.driver.implicitly_wait(10)
             self.driver.maximize_window()
             self.driver.get(URL)
@@ -637,6 +643,53 @@ class Functions(Inicializar):
                 print("check_element: No se encontró el elemento: " + self.json_ValueToFind)
                 return False
 
+    def validar_elemento(self, locator):
+        Get_Entity = Functions.get_entity(self, locator)
+
+        TIME_OUT = 10
+
+        if Get_Entity is None:
+            return print("No se encontró el valor en el Json definido")
+        else:
+            try:
+                if self.json_GetFieldBy.lower() == "id":
+                    wait = WebDriverWait(self.driver, TIME_OUT)
+                    wait.until(EC.visibility_of_element_located((By.ID, self.json_ValueToFind)))
+                    wait.until(EC.element_to_be_clickable((By.ID, self.json_ValueToFind)))
+                    print(u"validar_elemento clickable: Se visualizó el elemento " + locator)
+                    return True
+
+                elif self.json_GetFieldBy.lower() == "name":
+                    wait = WebDriverWait(self.driver, TIME_OUT)
+                    wait.until(EC.visibility_of_element_located((By.NAME, self.json_ValueToFind)))
+                    wait.until(EC.element_to_be_clickable((By.NAME, self.json_ValueToFind)))
+                    print(u"validar_elemento clickable: Se visualizó el elemento " + locator)
+                    return True
+
+                elif self.json_GetFieldBy.lower() == "xpath":
+                    wait = WebDriverWait(self.driver, TIME_OUT)
+                    wait.until(EC.visibility_of_element_located((By.XPATH, self.json_ValueToFind)))
+                    wait.until(EC.element_to_be_clickable((By.XPATH, self.json_ValueToFind)))
+                    print(u"validar_elemento clickable: Se visualizó el elemento " + locator)
+                    return True
+
+                elif self.json_GetFieldBy.lower() == "link":
+                    wait = WebDriverWait(self.driver, TIME_OUT)
+                    wait.until(EC.visibility_of_element_located((By.LINK_TEXT, self.json_ValueToFind)))
+                    wait.until(EC.element_to_be_clickable((By.LINK_TEXT, self.json_ValueToFind)))
+                    print(u"validar_elemento clickable: Se visualizó el elemento " + locator)
+                    return True
+
+                elif self.json_GetFieldBy.lower() == "css":
+                    wait = WebDriverWait(self.driver, TIME_OUT)
+                    wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, self.json_ValueToFind)))
+                    wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, self.json_ValueToFind)))
+                    print(u"validar_elemento clickable: Se visualizó el elemento " + locator)
+                    return True
+
+            except TimeoutException:
+                print("validar_elemento clickable: No se encontró el elemento: " + self.json_ValueToFind)
+                return False
     ##########################################################################
     ########################  <--- DATA DE ESCENARIO --->  ###################
     ##########################################################################
@@ -747,6 +800,40 @@ class Functions(Inicializar):
                     self.cursor.close()
                     print("pyodbc_query: Se cerró la conexión")
 
+    ##########################################################################
+    #######################  <--- CAPTURA DE PANTALLA --->  ##################
+    ##########################################################################
+
+    def hora_actual(self):
+        self.hora = time.strftime(Inicializar.HourFormat) # Formato de 24 hrs.
+        return self.hora
+
+    def crear_path(self):
+        dia = time.strftime("%d-%m-%Y") # formato aaaa/mm/dd
+        generalPath = Inicializar.Path_Evidencias
+        driverTest = Inicializar.Navegador
+        testCase = self.__class__.__name__
+        horaActual = horaGlobal
+        getContext = re.search("Contexto: " , testCase)
+
+        if getContext:
+            path = f"{generalPath}/{dia}/{driverTest}/{horaActual}/"
+        else:
+            path = f"{generalPath}/{dia}/{testCase}/{driverTest}/{horaActual}/"
+        if not os.path.exists(path): # Si no existe el directorio, lo crea
+            os.makedirs(path)
+        return path
+
+    def capturar_pantalla(self):
+        path = self.crear_path()
+        testCase = self.__class__.__name__
+        img = f'{path}/{testCase}_(' + str(self.hora_actual()) + ')' + '.png'
+        self.driver.get_screenshot_as_file(img)
+        print(img)
+        return img
+
+    def captura(self, descripcion):
+        allure.attach(self.driver.get_screenshot_as_png(), descripcion, attachment_type = allure.attachment_type.PNG)
 
 
 
