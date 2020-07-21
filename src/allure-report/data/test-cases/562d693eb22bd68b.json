@@ -1,0 +1,154 @@
+{
+  "uid" : "562d693eb22bd68b",
+  "name" : "test_013",
+  "fullName" : "tests.tst_013.Test_013#test_013",
+  "historyId" : "44b1d84aee22a9e1458a88bca5918421",
+  "time" : {
+    "start" : 1595292241037,
+    "stop" : 1595292249936,
+    "duration" : 8899
+  },
+  "description" : "Se requiere visitar el sitio de Google: </br> \nDeseamos ingresar texto en el recuadro de búsqueda de Google",
+  "descriptionHtml" : "<p>Se requiere visitar el sitio de Google: </br>\nDeseamos ingresar texto en el recuadro de búsqueda de Google</p>\n",
+  "status" : "skipped",
+  "statusMessage" : "Skipped: get_json_file: No se encontró el archivo oogle",
+  "statusTrace" : "('C:\\\\udemy.python.SeleniumFramework\\\\src\\\\functions\\\\Functions.py', 183, 'Skipped: get_json_file: No se encontró el archivo oogle')",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1595292241036,
+      "stop" : 1595292241036,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "Se requiere visitar el sitio de Google: </br> \nDeseamos ingresar texto en el recuadro de búsqueda de Google",
+    "status" : "skipped",
+    "statusMessage" : "Skipped: get_json_file: No se encontró el archivo oogle",
+    "statusTrace" : "('C:\\\\udemy.python.SeleniumFramework\\\\src\\\\functions\\\\Functions.py', 183, 'Skipped: get_json_file: No se encontró el archivo oogle')",
+    "steps" : [ {
+      "name" : "Paso 1: Ingresar a Google",
+      "time" : {
+        "start" : 1595292241037,
+        "stop" : 1595292249872,
+        "duration" : 8835
+      },
+      "status" : "skipped",
+      "statusMessage" : "Skipped: get_json_file: No se encontró el archivo oogle\n",
+      "statusTrace" : "  File \"C:\\udemy.python.SeleniumFramework\\src\\tests\\tst_013.py\", line 32, in setUp\n    Selenium.get_json_file(self, \"oogle\")\n  File \"C:\\udemy.python.SeleniumFramework\\src\\functions\\Functions.py\", line 183, in get_json_file\n    pytest.skip(u\"get_json_file: No se encontró el archivo \" + FILE)\n  File \"C:\\Programs\\Python\\lib\\site-packages\\_pytest\\outcomes.py\", line 145, in skip\n    raise Skipped(msg=msg, allow_module_level=allow_module_level)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : true,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "5c5178f42421a2bb",
+      "name" : "stdout",
+      "source" : "5c5178f42421a2bb.txt",
+      "type" : "text/plain",
+      "size" : 105
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 1,
+    "hasContent" : true,
+    "stepsCount" : 1
+  },
+  "afterStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1595292249949,
+      "stop" : 1595292249949,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "013: Se visita Google y se coloca una fecha"
+  }, {
+    "name" : "feature",
+    "value" : "Test Udemy 1"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "tst_013"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_013"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-00SVLVA"
+  }, {
+    "name" : "thread",
+    "value" : "12976-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.tst_013"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ {
+    "name" : "Caso de prueba 013",
+    "url" : "Caso de prueba 013",
+    "type" : "test_case"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a403cb54fb1e60a9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595292024266,
+        "stop" : 1595292053019,
+        "duration" : 28753
+      }
+    }, {
+      "uid" : "8f0027c44dee35af",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595291529389,
+        "stop" : 1595291579810,
+        "duration" : 50421
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "562d693eb22bd68b.json",
+  "parameterValues" : [ ]
+}

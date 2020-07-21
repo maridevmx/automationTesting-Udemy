@@ -1,0 +1,69 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "Test Udemy 1",
+    "children" : [ {
+      "name" : "014: Se visita Google y se coloca una fecha",
+      "children" : [ {
+        "name" : "test_014",
+        "uid" : "c328b102bd8f50d3",
+        "parentUid" : "42a061945f2e905084d68bd24215dc0a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1595270748208,
+          "stop" : 1595270820132,
+          "duration" : 71924
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_014",
+        "uid" : "5e47b643560de0c2",
+        "parentUid" : "42a061945f2e905084d68bd24215dc0a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1595292251590,
+          "stop" : 1595292264351,
+          "duration" : 12761
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "42a061945f2e905084d68bd24215dc0a"
+    }, {
+      "name" : "013: Se visita Google y se coloca una fecha",
+      "children" : [ {
+        "name" : "test_013",
+        "uid" : "562d693eb22bd68b",
+        "parentUid" : "d74d60361566d615ab6c3c45babab4d8",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1595292241037,
+          "stop" : 1595292249936,
+          "duration" : 8899
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d74d60361566d615ab6c3c45babab4d8"
+    }, {
+      "name" : "015: Se realiza la captura de pantalla",
+      "children" : [ {
+        "name" : "test_015",
+        "uid" : "8da04cf1b3cc8a33",
+        "parentUid" : "8865fd980384b536b18dd2b17cbf88cb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1595292265881,
+          "stop" : 1595292280365,
+          "duration" : 14484
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8865fd980384b536b18dd2b17cbf88cb"
+    } ],
+    "uid" : "a2f9ea72f0c10e6ecdd5a82e2c0c8d2e"
+  } ],
+  "name" : "behaviors"
+}

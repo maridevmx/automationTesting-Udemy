@@ -1,0 +1,166 @@
+{
+  "uid" : "3fc4bbd337c8ceef",
+  "name" : "test_015",
+  "fullName" : "tests.tst_015.Test_015#test_015",
+  "historyId" : "92a5151c6ad323e0d00198a02f5b5f5d",
+  "time" : {
+    "start" : 1595292077762,
+    "stop" : 1595292100114,
+    "duration" : 22352
+  },
+  "description" : "Se requiere visitar el sitio de Google: </br> \nDeseamos ingresar texto en el recuadro de búsqueda de Google",
+  "descriptionHtml" : "<p>Se requiere visitar el sitio de Google: </br>\nDeseamos ingresar texto en el recuadro de búsqueda de Google</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1595292077760,
+      "stop" : 1595292077761,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "Se requiere visitar el sitio de Google: </br> \nDeseamos ingresar texto en el recuadro de búsqueda de Google",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Paso 1: Ingresar a Google",
+      "time" : {
+        "start" : 1595292077762,
+        "stop" : 1595292088812,
+        "duration" : 11050
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Paso 2: Se realiza captura de pantalla",
+      "time" : {
+        "start" : 1595292088812,
+        "stop" : 1595292093951,
+        "duration" : 5139
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "c0a745b30aec56c8",
+        "name" : "Google",
+        "source" : "c0a745b30aec56c8.png",
+        "type" : "image/png",
+        "size" : 38785
+      } ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Paso 3: Se cierra el navegador",
+      "time" : {
+        "start" : 1595292093951,
+        "stop" : 1595292100114,
+        "duration" : 6163
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "323b699ac923cfe1",
+      "name" : "stdout",
+      "source" : "323b699ac923cfe1.txt",
+      "type" : "text/plain",
+      "size" : 248
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 2,
+    "hasContent" : true,
+    "stepsCount" : 3
+  },
+  "afterStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1595292100115,
+      "stop" : 1595292100115,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Test Udemy 1"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "story",
+    "value" : "015: Se realiza la captura de pantalla"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "tst_015"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_015"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-00SVLVA"
+  }, {
+    "name" : "thread",
+    "value" : "20576-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.tst_015"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ {
+    "name" : "Caso de prueba 015",
+    "url" : "Caso de prueba 015",
+    "type" : "test_case"
+  } ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3fc4bbd337c8ceef.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,160 @@
+{
+  "uid" : "95c3fde5b4e34690",
+  "name" : "test_014",
+  "fullName" : "tests.tst_014.Test_014#test_014",
+  "historyId" : "202de46b299bb044cfbc6dd957857e7d",
+  "time" : {
+    "start" : 1595291581696,
+    "stop" : 1595291609416,
+    "duration" : 27720
+  },
+  "description" : "Se requiere visitar el sitio de Google: </br> \nDeseamos ingresar texto en el recuadro de búsqueda de Google",
+  "descriptionHtml" : "<p>Se requiere visitar el sitio de Google: </br>\nDeseamos ingresar texto en el recuadro de búsqueda de Google</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1595291581695,
+      "stop" : 1595291581695,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "Se requiere visitar el sitio de Google: </br> \nDeseamos ingresar texto en el recuadro de búsqueda de Google",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Paso 1: Ingresar a Google",
+      "time" : {
+        "start" : 1595291581697,
+        "stop" : 1595291600059,
+        "duration" : 18362
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Paso 2: Ingresar término de búsqueda",
+      "time" : {
+        "start" : 1595291600059,
+        "stop" : 1595291603253,
+        "duration" : 3194
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Paso 3: Se cierra el navegador",
+      "time" : {
+        "start" : 1595291603253,
+        "stop" : 1595291609416,
+        "duration" : 6163
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "b0cadc8a6d20b41b",
+      "name" : "stdout",
+      "source" : "b0cadc8a6d20b41b.txt",
+      "type" : "text/plain",
+      "size" : 563
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1,
+    "hasContent" : true,
+    "stepsCount" : 3
+  },
+  "afterStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1595291609417,
+      "stop" : 1595291609417,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "014: Se visita Google y se coloca una fecha"
+  }, {
+    "name" : "feature",
+    "value" : "Test Udemy 1"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "tst_014"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_014"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-00SVLVA"
+  }, {
+    "name" : "thread",
+    "value" : "19756-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.tst_014"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ {
+    "name" : "Caso de prueba 014",
+    "url" : "Caso de prueba 014",
+    "type" : "test_case"
+  } ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "95c3fde5b4e34690.json",
+  "parameterValues" : [ ]
+}
