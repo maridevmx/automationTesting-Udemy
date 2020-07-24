@@ -121,12 +121,14 @@ class Functions(Inicializar):
     #######################  <--- LOCATORS HANDLE --->  ######################
     ##########################################################################
 
+    # DEPRECADO
     # FUNCIÓN QUE BUSCA ELEMENTOS POR XPATH
     def xpath_element(self, XPATH):
         elements = self.driver.find_element_by_xpath(XPATH)
         print("Xpath Elements: Se interactuó con el elemento " + XPATH)
         return elements
 
+    # DEPRECADO
     # FUNCIÓN QUE BUSCA ELEMENTOS POR XPATH
     def _xpath_element(self, XPATH):
         try:
@@ -142,12 +144,14 @@ class Functions(Inicializar):
             print(u"Esperar Elemento: No presente " + XPATH)
             Functions.tearDown(self)
 
+    # DEPRECADO
     # FUNCIÓN QUE BUSCA ELEMENTOS POR ID
     def id_element(self, ID):
         elements = self.driver.find_element_by_id(ID)
         print("Id Elements: Se interactuó con el elemento " + ID)
         return elements
 
+    # DEPRECADO
     # FUNCIÓN QUE BUSCA ELEMENTOS POR ID
     def _id_element(self, ID):
         try:
@@ -163,6 +167,7 @@ class Functions(Inicializar):
             print(u"Esperar Elemento: No presente " + ID)
             Functions.tearDown(self)
 
+    # DEPRECADO
     # AGREGAR FUNCIONES PARA BUSCAR POR NAME, LINK Y CSS
 
     ##########################################################################
@@ -824,10 +829,10 @@ class Functions(Inicializar):
             os.makedirs(path)
         return path
 
-    def capturar_pantalla(self):
-        path = self.crear_path()
-        testCase = self.__class__.__name__
-        img = f'{path}/{testCase}_(' + str(self.hora_actual()) + ')' + '.png'
+    def capturar_pantalla(self, testCase):
+        path = Functions.crear_path(self)
+        #testCase = self.__class__.__name__
+        img = f'{path}/{testCase}_(' + str(Functions.hora_actual(self)) + ')' + '.png'
         self.driver.get_screenshot_as_file(img)
         print(img)
         return img

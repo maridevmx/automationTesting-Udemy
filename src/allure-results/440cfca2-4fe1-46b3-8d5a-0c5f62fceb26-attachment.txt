@@ -1,8 +1,0 @@
-Directorio base: C:\udemy.python.SeleniumFramework\src
---------------------
-FIREFOX
---------------------
-Get json_file: C:\udemy.python.SeleniumFramework\src/pages/Google.json
-Esperar: Inicia ( 5)
-Esperar: Carga Finalizada...
-Se cerrará el driver
