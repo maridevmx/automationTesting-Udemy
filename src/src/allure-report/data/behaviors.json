@@ -1,60 +1,48 @@
 {
   "uid" : "b1a8273437954620fa374b796ffaacdd",
   "children" : [ {
-    "name" : "Test Udemy 1",
+    "name" : "Funciones básicas de Selenium con BDD",
     "children" : [ {
-      "name" : "013: Se visita Google y se coloca una fecha",
-      "children" : [ {
-        "name" : "test_013",
-        "uid" : "bb4d160bad265f89",
-        "parentUid" : "d74d60361566d615ab6c3c45babab4d8",
-        "status" : "passed",
-        "time" : {
-          "start" : 1595383988679,
-          "stop" : 1595384008716,
-          "duration" : 20037
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "d74d60361566d615ab6c3c45babab4d8"
+      "name" : "Abrir el navegador",
+      "uid" : "e238f8b5fe7e6076",
+      "parentUid" : "9c03d79905f41f014ee8a473e41036fb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595880445099,
+        "stop" : 1595880461344,
+        "duration" : 16245
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
     }, {
-      "name" : "014: Se visita Google y se coloca una fecha",
-      "children" : [ {
-        "name" : "test_014",
-        "uid" : "96c6c84378dad36e",
-        "parentUid" : "42a061945f2e905084d68bd24215dc0a",
-        "status" : "passed",
-        "time" : {
-          "start" : 1595384010182,
-          "stop" : 1595384033304,
-          "duration" : 23122
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "42a061945f2e905084d68bd24215dc0a"
+      "name" : "Abrir con URL",
+      "uid" : "a0ea43ab66c24f2c",
+      "parentUid" : "9c03d79905f41f014ee8a473e41036fb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595880461346,
+        "stop" : 1595880478801,
+        "duration" : 17455
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
     }, {
-      "name" : "015: Se realiza la captura de pantalla",
-      "children" : [ {
-        "name" : "test_015",
-        "uid" : "76cdcd26ae36f5b4",
-        "parentUid" : "8865fd980384b536b18dd2b17cbf88cb",
-        "status" : "passed",
-        "time" : {
-          "start" : 1595384034811,
-          "stop" : 1595384053029,
-          "duration" : 18218
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "8865fd980384b536b18dd2b17cbf88cb"
+      "name" : "Abrir con navegador",
+      "uid" : "8e4ea9f187fc0700",
+      "parentUid" : "9c03d79905f41f014ee8a473e41036fb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595880478803,
+        "stop" : 1595880489240,
+        "duration" : 10437
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
     } ],
-    "uid" : "a2f9ea72f0c10e6ecdd5a82e2c0c8d2e"
+    "uid" : "9c03d79905f41f014ee8a473e41036fb"
   } ],
   "name" : "behaviors"
 }

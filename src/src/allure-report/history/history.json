@@ -1,5 +1,5 @@
 {
-  "92a5151c6ad323e0d00198a02f5b5f5d" : {
+  "8045e58627003ff591509db1af3f10a3" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -9,85 +9,26 @@
       "total" : 2
     },
     "items" : [ {
-      "uid" : "76cdcd26ae36f5b4",
-      "reportUrl" : "http://localhost:7000/job/Udemy%20Selenium%20Test/12/allure/#testresult/76cdcd26ae36f5b4",
+      "uid" : "a0ea43ab66c24f2c",
+      "reportUrl" : "http://localhost:7000/job/Proyecto%20udemy.python.SeleniumFramework%20-%20Behave/2/allure/#testresult/a0ea43ab66c24f2c",
       "status" : "passed",
       "time" : {
-        "start" : 1595384034811,
-        "stop" : 1595384053029,
-        "duration" : 18218
+        "start" : 1595880461346,
+        "stop" : 1595880478801,
+        "duration" : 17455
       }
     }, {
-      "uid" : "cd9a7bb1759fa42e",
-      "reportUrl" : "http://localhost:7000/job/Udemy%20Selenium%20Test/7/allure/#testresult/cd9a7bb1759fa42e",
+      "uid" : "f401873beb1aa840",
+      "reportUrl" : "http://localhost:7000/job/Proyecto%20udemy.python.SeleniumFramework%20-%20Behave/1/allure/#testresult/f401873beb1aa840",
       "status" : "passed",
       "time" : {
-        "start" : 1595292265881,
-        "stop" : 1595292280365,
-        "duration" : 14484
+        "start" : 1595880141132,
+        "stop" : 1595880165782,
+        "duration" : 24650
       }
     } ]
   },
-  "44b1d84aee22a9e1458a88bca5918421" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 2,
-      "unknown" : 0,
-      "total" : 3
-    },
-    "items" : [ {
-      "uid" : "d082f2807f42044a",
-      "reportUrl" : "http://localhost:7000/job/Udemy%20Selenium%20Test/10/allure/#testresult/d082f2807f42044a",
-      "status" : "passed",
-      "time" : {
-        "start" : 1595383633425,
-        "stop" : 1595383654506,
-        "duration" : 21081
-      }
-    }, {
-      "uid" : "3b4ab0589f377e14",
-      "reportUrl" : "http://localhost:7000/job/Udemy%20Selenium%20Test/9/allure/#testresult/3b4ab0589f377e14",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=netTimeout&u=https%3A//www.google.com/&c=UTF-8&d=The%20server%20at%20www.google.com%20is%20taking%20too%20long%20to%20respond.",
-      "time" : {
-        "start" : 1595383203751,
-        "stop" : 1595383254021,
-        "duration" : 50270
-      }
-    }, {
-      "uid" : "7b8b184ebe2e9afb",
-      "reportUrl" : "http://localhost:7000/job/Udemy%20Selenium%20Test/7/allure/#testresult/7b8b184ebe2e9afb",
-      "status" : "passed",
-      "time" : {
-        "start" : 1595382285763,
-        "stop" : 1595382306982,
-        "duration" : 21219
-      }
-    } ]
-  },
-  "205b0ee524e8b39eca8eaecb652c9d32" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "aa997e42427f83cd",
-      "reportUrl" : "http://localhost:7000/job/Udemy%20Selenium%20Test/7/allure/#testresult/aa997e42427f83cd",
-      "status" : "passed",
-      "time" : {
-        "start" : 1595270748208,
-        "stop" : 1595270820132,
-        "duration" : 71924
-      }
-    } ]
-  },
-  "202de46b299bb044cfbc6dd957857e7d" : {
+  "ea8030ac0a778e4a30e3e3d588e7e747" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -97,78 +38,51 @@
       "total" : 2
     },
     "items" : [ {
-      "uid" : "96c6c84378dad36e",
-      "reportUrl" : "http://localhost:7000/job/Udemy%20Selenium%20Test/12/allure/#testresult/96c6c84378dad36e",
+      "uid" : "8e4ea9f187fc0700",
+      "reportUrl" : "http://localhost:7000/job/Proyecto%20udemy.python.SeleniumFramework%20-%20Behave/2/allure/#testresult/8e4ea9f187fc0700",
       "status" : "passed",
       "time" : {
-        "start" : 1595384010182,
-        "stop" : 1595384033304,
-        "duration" : 23122
+        "start" : 1595880478803,
+        "stop" : 1595880489240,
+        "duration" : 10437
       }
     }, {
-      "uid" : "13c7e936122bbc1d",
-      "reportUrl" : "http://localhost:7000/job/Udemy%20Selenium%20Test/7/allure/#testresult/13c7e936122bbc1d",
+      "uid" : "e04999989ac384aa",
+      "reportUrl" : "http://localhost:7000/job/Proyecto%20udemy.python.SeleniumFramework%20-%20Behave/1/allure/#testresult/e04999989ac384aa",
       "status" : "passed",
       "time" : {
-        "start" : 1595292251590,
-        "stop" : 1595292264351,
-        "duration" : 12761
+        "start" : 1595880165784,
+        "stop" : 1595880179228,
+        "duration" : 13444
       }
     } ]
   },
-  "75d3f65ce6c5c0126620bd0a806dc5fa" : {
+  "ea493398afe0644cb0aed72883d68438" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 2,
       "unknown" : 0,
-      "total" : 5
+      "total" : 2
     },
     "items" : [ {
-      "uid" : "bb4d160bad265f89",
-      "reportUrl" : "http://localhost:7000/job/Udemy%20Selenium%20Test/12/allure/#testresult/bb4d160bad265f89",
+      "uid" : "e238f8b5fe7e6076",
+      "reportUrl" : "http://localhost:7000/job/Proyecto%20udemy.python.SeleniumFramework%20-%20Behave/2/allure/#testresult/e238f8b5fe7e6076",
       "status" : "passed",
       "time" : {
-        "start" : 1595383988679,
-        "stop" : 1595384008716,
-        "duration" : 20037
+        "start" : 1595880445099,
+        "stop" : 1595880461344,
+        "duration" : 16245
       }
     }, {
-      "uid" : "fb8c3e446bead8a8",
-      "reportUrl" : "http://localhost:7000/job/Udemy%20Selenium%20Test/11/allure/#testresult/fb8c3e446bead8a8",
+      "uid" : "a14352f9d738484a",
+      "reportUrl" : "http://localhost:7000/job/Proyecto%20udemy.python.SeleniumFramework%20-%20Behave/1/allure/#testresult/a14352f9d738484a",
       "status" : "passed",
       "time" : {
-        "start" : 1595383926723,
-        "stop" : 1595383947668,
-        "duration" : 20945
-      }
-    }, {
-      "uid" : "c5d2efd1f489d8e6",
-      "reportUrl" : "http://localhost:7000/job/Udemy%20Selenium%20Test/10/allure/#testresult/c5d2efd1f489d8e6",
-      "status" : "passed",
-      "time" : {
-        "start" : 1595382909936,
-        "stop" : 1595382931656,
-        "duration" : 21720
-      }
-    }, {
-      "uid" : "15df31b9551e50e9",
-      "reportUrl" : "http://localhost:7000/job/Udemy%20Selenium%20Test/9/allure/#testresult/15df31b9551e50e9",
-      "status" : "passed",
-      "time" : {
-        "start" : 1595382909936,
-        "stop" : 1595382931656,
-        "duration" : 21720
-      }
-    }, {
-      "uid" : "6e9fbedafac0d950",
-      "reportUrl" : "http://localhost:7000/job/Udemy%20Selenium%20Test/8/allure/#testresult/6e9fbedafac0d950",
-      "status" : "passed",
-      "time" : {
-        "start" : 1595382909936,
-        "stop" : 1595382931656,
-        "duration" : 21720
+        "start" : 1595880130113,
+        "stop" : 1595880141131,
+        "duration" : 11018
       }
     } ]
   }

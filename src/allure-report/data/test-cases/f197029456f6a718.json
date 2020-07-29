@@ -1,0 +1,133 @@
+{
+  "uid" : "f197029456f6a718",
+  "name" : "Tomar captura de pantalla",
+  "historyId" : "464b09e7767ae2623d8e578d8c48d248",
+  "time" : {
+    "start" : 1595878661479,
+    "stop" : 1595878716051,
+    "duration" : 54572
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given Abrir la aplicacion",
+      "time" : {
+        "start" : 1595878661480,
+        "stop" : 1595878687782,
+        "duration" : 26302
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "And Cargo el DOM de la App: spotify_registro",
+      "time" : {
+        "start" : 1595878687782,
+        "stop" : 1595878687783,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "And En el campo Email se escribe testingUdemy@gmail.com",
+      "time" : {
+        "start" : 1595878687784,
+        "stop" : 1595878688856,
+        "duration" : 1072
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "And Se toma captura de pantalla TestUdemy",
+      "time" : {
+        "start" : 1595878688856,
+        "stop" : 1595878689009,
+        "duration" : 153
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Then Cierro la app",
+      "time" : {
+        "start" : 1595878689009,
+        "stop" : 1595878716051,
+        "duration" : 27042
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 5,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "Captura"
+  }, {
+    "name" : "tag",
+    "value" : "Selenium"
+  }, {
+    "name" : "feature",
+    "value" : "Funciones básicas de Selenium con BDD"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "Captura", "Selenium" ]
+  },
+  "source" : "f197029456f6a718.json",
+  "parameterValues" : [ ]
+}

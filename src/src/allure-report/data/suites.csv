@@ -1,7 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Tue Jul 21 21:13:30 CDT 2020","Tue Jul 21 21:13:53 CDT 2020","23122","tests","tst_014","Test_014","","","test_014","Se requiere visitar el sitio de Google: </br> 
-Deseamos ingresar texto en el recuadro de búsqueda de Google"
-"passed","Tue Jul 21 21:13:08 CDT 2020","Tue Jul 21 21:13:28 CDT 2020","20037","","tst_013","Test_013","","","test_013","Se requiere visitar el sitio de Google: </br> 
-Deseamos ingresar texto en el recuadro de búsqueda de Google"
-"passed","Tue Jul 21 21:13:54 CDT 2020","Tue Jul 21 21:14:13 CDT 2020","18218","tests","tst_015","Test_015","","","test_015","Se requiere visitar el sitio de Google: </br> 
-Deseamos ingresar texto en el recuadro de búsqueda de Google"
+"passed","Mon Jul 27 15:07:25 CDT 2020","Mon Jul 27 15:07:41 CDT 2020","16245","","","","","","Abrir el navegador",""
+"passed","Mon Jul 27 15:07:41 CDT 2020","Mon Jul 27 15:07:58 CDT 2020","17455","","","","","","Abrir con URL",""
+"passed","Mon Jul 27 15:07:58 CDT 2020","Mon Jul 27 15:08:09 CDT 2020","10437","","","","","","Abrir con navegador",""

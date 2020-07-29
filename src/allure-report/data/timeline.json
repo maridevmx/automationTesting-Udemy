@@ -1,0 +1,101 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "Abrir con URL",
+    "uid" : "cf74f1dec7cfc74a",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1595878563641,
+      "stop" : 1595878604498,
+      "duration" : 40857
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Busqueda de texto en Spotify",
+    "uid" : "b184224d98d0b53",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1595878827322,
+      "stop" : 1595878875535,
+      "duration" : 48213
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Tomar captura de pantalla",
+    "uid" : "f197029456f6a718",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1595878661479,
+      "stop" : 1595878716051,
+      "duration" : 54572
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Abrir con navegador",
+    "uid" : "a0a932ab9a441b0d",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1595878604499,
+      "stop" : 1595878620026,
+      "duration" : 15527
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Abrir el navegador",
+    "uid" : "4366bc00cadf1e44",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1595878538901,
+      "stop" : 1595878563639,
+      "duration" : 24738
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Clics Dropdowns y textbox",
+    "uid" : "e0951fa411e7c016",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1595878716053,
+      "stop" : 1595878784242,
+      "duration" : 68189
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Establecer el DOM",
+    "uid" : "2ae28f5e569abb5b",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1595878620028,
+      "stop" : 1595878661477,
+      "duration" : 41449
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Frames y Ventanas",
+    "uid" : "3ecce0c999ddc077",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1595878784244,
+      "stop" : 1595878827321,
+      "duration" : 43077
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  } ],
+  "name" : "timeline"
+}

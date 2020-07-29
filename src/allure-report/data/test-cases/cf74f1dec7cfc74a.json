@@ -1,0 +1,88 @@
+{
+  "uid" : "cf74f1dec7cfc74a",
+  "name" : "Abrir con URL",
+  "historyId" : "8045e58627003ff591509db1af3f10a3",
+  "time" : {
+    "start" : 1595878563641,
+    "stop" : 1595878604498,
+    "duration" : 40857
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given Inicializo la app en la URL https://www.toolsqa.com/cucumber/behavior-driven-development/",
+      "time" : {
+        "start" : 1595878563643,
+        "stop" : 1595878591306,
+        "duration" : 27663
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Then Cierro la app",
+      "time" : {
+        "start" : 1595878591307,
+        "stop" : 1595878604498,
+        "duration" : 13191
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "Navegador"
+  }, {
+    "name" : "tag",
+    "value" : "Selenium"
+  }, {
+    "name" : "feature",
+    "value" : "Funciones básicas de Selenium con BDD"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "Navegador", "Selenium" ]
+  },
+  "source" : "cf74f1dec7cfc74a.json",
+  "parameterValues" : [ ]
+}

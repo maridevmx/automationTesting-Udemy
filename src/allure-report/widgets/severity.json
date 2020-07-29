@@ -1,0 +1,81 @@
+[ {
+  "uid" : "4366bc00cadf1e44",
+  "name" : "Abrir el navegador",
+  "time" : {
+    "start" : 1595878538901,
+    "stop" : 1595878563639,
+    "duration" : 24738
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2ae28f5e569abb5b",
+  "name" : "Establecer el DOM",
+  "time" : {
+    "start" : 1595878620028,
+    "stop" : 1595878661477,
+    "duration" : 41449
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b184224d98d0b53",
+  "name" : "Busqueda de texto en Spotify",
+  "time" : {
+    "start" : 1595878827322,
+    "stop" : 1595878875535,
+    "duration" : 48213
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3ecce0c999ddc077",
+  "name" : "Frames y Ventanas",
+  "time" : {
+    "start" : 1595878784244,
+    "stop" : 1595878827321,
+    "duration" : 43077
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cf74f1dec7cfc74a",
+  "name" : "Abrir con URL",
+  "time" : {
+    "start" : 1595878563641,
+    "stop" : 1595878604498,
+    "duration" : 40857
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a0a932ab9a441b0d",
+  "name" : "Abrir con navegador",
+  "time" : {
+    "start" : 1595878604499,
+    "stop" : 1595878620026,
+    "duration" : 15527
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e0951fa411e7c016",
+  "name" : "Clics Dropdowns y textbox",
+  "time" : {
+    "start" : 1595878716053,
+    "stop" : 1595878784242,
+    "duration" : 68189
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f197029456f6a718",
+  "name" : "Tomar captura de pantalla",
+  "time" : {
+    "start" : 1595878661479,
+    "stop" : 1595878716051,
+    "duration" : 54572
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

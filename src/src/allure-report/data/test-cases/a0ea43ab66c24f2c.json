@@ -1,0 +1,109 @@
+{
+  "uid" : "a0ea43ab66c24f2c",
+  "name" : "Abrir con URL",
+  "historyId" : "8045e58627003ff591509db1af3f10a3",
+  "time" : {
+    "start" : 1595880461346,
+    "stop" : 1595880478801,
+    "duration" : 17455
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given Inicializo la app en la URL https://www.toolsqa.com/cucumber/behavior-driven-development/",
+      "time" : {
+        "start" : 1595880461347,
+        "stop" : 1595880476428,
+        "duration" : 15081
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Then Cierro la app",
+      "time" : {
+        "start" : 1595880476428,
+        "stop" : 1595880478800,
+        "duration" : 2372
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "Navegador"
+  }, {
+    "name" : "tag",
+    "value" : "Selenium"
+  }, {
+    "name" : "feature",
+    "value" : "Funciones básicas de Selenium con BDD"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "f401873beb1aa840",
+        "reportUrl" : "http://localhost:7000/job/Proyecto%20udemy.python.SeleniumFramework%20-%20Behave/1/allure/#testresult/f401873beb1aa840",
+        "status" : "passed",
+        "time" : {
+          "start" : 1595880141132,
+          "stop" : 1595880165782,
+          "duration" : 24650
+        }
+      } ]
+    },
+    "tags" : [ "Navegador", "Selenium" ]
+  },
+  "source" : "a0ea43ab66c24f2c.json",
+  "parameterValues" : [ ]
+}

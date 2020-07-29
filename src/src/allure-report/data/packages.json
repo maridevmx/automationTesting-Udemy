@@ -1,60 +1,44 @@
 {
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
   "children" : [ {
-    "name" : "tst_013",
-    "children" : [ {
-      "name" : "test_013",
-      "uid" : "bb4d160bad265f89",
-      "parentUid" : "c39ddef659f27b30de2eebb6fafdbae7",
-      "status" : "passed",
-      "time" : {
-        "start" : 1595383988679,
-        "stop" : 1595384008716,
-        "duration" : 20037
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "c39ddef659f27b30de2eebb6fafdbae7"
+    "name" : "Abrir el navegador",
+    "uid" : "e238f8b5fe7e6076",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1595880445099,
+      "stop" : 1595880461344,
+      "duration" : 16245
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
   }, {
-    "name" : "tests",
-    "children" : [ {
-      "name" : "tst_014",
-      "children" : [ {
-        "name" : "test_014",
-        "uid" : "96c6c84378dad36e",
-        "parentUid" : "860a32852b79223625b16a262f749e39",
-        "status" : "passed",
-        "time" : {
-          "start" : 1595384010182,
-          "stop" : 1595384033304,
-          "duration" : 23122
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "860a32852b79223625b16a262f749e39"
-    }, {
-      "name" : "tst_015",
-      "children" : [ {
-        "name" : "test_015",
-        "uid" : "76cdcd26ae36f5b4",
-        "parentUid" : "20862b98bd56f40a8001a12c4ae053e8",
-        "status" : "passed",
-        "time" : {
-          "start" : 1595384034811,
-          "stop" : 1595384053029,
-          "duration" : 18218
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "20862b98bd56f40a8001a12c4ae053e8"
-    } ],
-    "uid" : "bf49149a3821e34f7608bb6885d52868"
+    "name" : "Abrir con URL",
+    "uid" : "a0ea43ab66c24f2c",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1595880461346,
+      "stop" : 1595880478801,
+      "duration" : 17455
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Abrir con navegador",
+    "uid" : "8e4ea9f187fc0700",
+    "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+    "status" : "passed",
+    "time" : {
+      "start" : 1595880478803,
+      "stop" : 1595880489240,
+      "duration" : 10437
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
   } ],
   "name" : "packages"
 }

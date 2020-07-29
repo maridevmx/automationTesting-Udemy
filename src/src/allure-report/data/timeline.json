@@ -1,60 +1,44 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
-    "name" : "DESKTOP-00SVLVA",
-    "children" : [ {
-      "name" : "16852-MainThread",
-      "children" : [ {
-        "name" : "test_013",
-        "uid" : "bb4d160bad265f89",
-        "parentUid" : "4bcfbb8ed6c04a9226b52626ecaeae10",
-        "status" : "passed",
-        "time" : {
-          "start" : 1595383988679,
-          "stop" : 1595384008716,
-          "duration" : 20037
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "4bcfbb8ed6c04a9226b52626ecaeae10"
-    }, {
-      "name" : "17008-MainThread",
-      "children" : [ {
-        "name" : "test_014",
-        "uid" : "96c6c84378dad36e",
-        "parentUid" : "a6aa75c24732322c456d56ca391a57b0",
-        "status" : "passed",
-        "time" : {
-          "start" : 1595384010182,
-          "stop" : 1595384033304,
-          "duration" : 23122
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "a6aa75c24732322c456d56ca391a57b0"
-    }, {
-      "name" : "14096-MainThread",
-      "children" : [ {
-        "name" : "test_015",
-        "uid" : "76cdcd26ae36f5b4",
-        "parentUid" : "ae8e9ac41829271a4c5dda84582bf8fb",
-        "status" : "passed",
-        "time" : {
-          "start" : 1595384034811,
-          "stop" : 1595384053029,
-          "duration" : 18218
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "ae8e9ac41829271a4c5dda84582bf8fb"
-    } ],
-    "uid" : "52c7b00686d1f8b12de54b27d08b12ef"
+    "name" : "Abrir con navegador",
+    "uid" : "8e4ea9f187fc0700",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1595880478803,
+      "stop" : 1595880489240,
+      "duration" : 10437
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Abrir con URL",
+    "uid" : "a0ea43ab66c24f2c",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1595880461346,
+      "stop" : 1595880478801,
+      "duration" : 17455
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Abrir el navegador",
+    "uid" : "e238f8b5fe7e6076",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1595880445099,
+      "stop" : 1595880461344,
+      "duration" : 16245
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
   } ],
   "name" : "timeline"
 }

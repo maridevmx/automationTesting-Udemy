@@ -19,7 +19,7 @@ from selenium.common.exceptions import NoSuchWindowException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from src.functions.Inicializar import Inicializar
+from functions.Inicializar import Inicializar
 from selenium import webdriver
 from selenium.webdriver.ie.options import DesiredCapabilities
 from selenium.webdriver.chrome.options import Options as OptionsChrome

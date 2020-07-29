@@ -1,0 +1,109 @@
+{
+  "uid" : "8e4ea9f187fc0700",
+  "name" : "Abrir con navegador",
+  "historyId" : "ea8030ac0a778e4a30e3e3d588e7e747",
+  "time" : {
+    "start" : 1595880478803,
+    "stop" : 1595880489240,
+    "duration" : 10437
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given Abro la app con el navegador CHROME",
+      "time" : {
+        "start" : 1595880478804,
+        "stop" : 1595880487035,
+        "duration" : 8231
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Then Cierro la app",
+      "time" : {
+        "start" : 1595880487035,
+        "stop" : 1595880489240,
+        "duration" : 2205
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "Navegador"
+  }, {
+    "name" : "tag",
+    "value" : "Selenium"
+  }, {
+    "name" : "feature",
+    "value" : "Funciones básicas de Selenium con BDD"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "e04999989ac384aa",
+        "reportUrl" : "http://localhost:7000/job/Proyecto%20udemy.python.SeleniumFramework%20-%20Behave/1/allure/#testresult/e04999989ac384aa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1595880165784,
+          "stop" : 1595880179228,
+          "duration" : 13444
+        }
+      } ]
+    },
+    "tags" : [ "Navegador", "Selenium" ]
+  },
+  "source" : "8e4ea9f187fc0700.json",
+  "parameterValues" : [ ]
+}
